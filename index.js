@@ -22,6 +22,10 @@ app.use(express.json());
 app.use(cors(corsOptionsDelegate));
 
 app.use(express.static(path.join(__dirname, '/static/')));
+app.use(express.static(path.join(__dirname, '/static/'), { index: false, extensions: ['html'] }));
+app.use((req, res, next) => {
+    res.status(404).send(`Could not find ${req.path}`)
+})
 
 function database_() {
     (this.get = async function (path) {
@@ -41,6 +45,10 @@ app.get('/kb/:id', async (req, res) => {
         res.send(data)
     })
 });
+
+/*app.get('*', async (req, res) => {
+    
+});*/
 
 const server = app.listen(2000, () => {
     console.log('ITBS Utah Support server is running');

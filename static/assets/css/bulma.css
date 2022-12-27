@@ -11414,8 +11414,11 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-info {
-  background-color: #3e8ed0;
-  color: #fff;
+    background-image: url('../img/background.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    vertical-align: middle;
 }
 
 .hero.is-info a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),

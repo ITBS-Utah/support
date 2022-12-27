@@ -14,10 +14,66 @@
 
 <body>
     <div id="top"></div>
+    <section class="hero is-info is-halfheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand is-dark">
+                        <a class="heroIcon" href="./">
+                            <img src="/assets/img/logo_full.png" title="Logo">
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active" href="./kb">
+                                Knowlage Base
+                            </a>
+                            <!--<a class="navbar-item" href="/settings">
+                                Settings
+                            </a>-->
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <p id="username" class="navbar-item" data-action="open_profile">Loading...</p>
+                                <span class="profile-icon" data-action="open_profile"></span>
 
-    <h1>Under construction</h1>
+                                <div class="navbar-dropdown">
+                                    <a data-action="open_profile" class="navbar-item is-dropdown">
+                                        Profile
+                                    </a>
+                                    <!--<a href="/settings" class="navbar-item is-dropdown">
+                                        Settings
+                                    </a>-->
+                                    <hr class="navbar-divider">
+                                    <a href="/?action=logout" class="navbar-item is-dropdown">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
 
-    <span class="material-symbols-outlined scroll_arrow fadeout">arrow_circle_up</span>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="heroTitle">
+                    Support
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="content">
+        <!--<h1>Under construction</h1>-->
+        <span class="material-symbols-outlined scroll_arrow fadeout">arrow_circle_up</span>
+    </div>
 
     <script src="./assets/js/main.js"></script>
 </body>
