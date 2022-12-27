@@ -1,0 +1,62 @@
+* {
+    font-family: montserrat;
+    transition: 1s;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100vw;
+}
+
+h1 {
+    font-family: montserrat-black;
+}
+
+.material-symbols-outlined {
+    user-select: none;
+}
+
+.scroll_arrow {
+    font-size: 45px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.fadein {
+    opacity: 1;
+}
+
+.fadeout {
+    opacity: 0;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/Montserrat-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat-black';
+    src: url('../fonts/Montserrat-Black.woff2') format('woff2'),
+        url('../fonts/Montserrat-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
