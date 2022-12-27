@@ -1,0 +1,26 @@
+{
+    "name": "itbssupport",
+    "version": "1.0.0",
+    "description": "The frontent and api of the ITBS Utah support page",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ITBS-Utah/support.git"
+    },
+    "author": "Russell2259, jake-k7",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/ITBS-Utah/support/issues"
+    },
+    "homepage": "https://github.com/ITBS-Utah/support#readme",
+    "dependencies": {
+      "@sendgrid/mail": "^7.7.0",
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "uuid": "^9.0.0"
+    }
+  }
+  
