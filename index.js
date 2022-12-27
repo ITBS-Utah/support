@@ -20,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(corsOptionsDelegate));
 
-
+app.use(express.static(path.join(__dirname, '/static/')));
 
 const server = app.listen(2000, () => {
     console.log('ITBS Utah Support server is running');

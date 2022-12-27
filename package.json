@@ -1,7 +1,7 @@
 {
     "name": "itbssupport",
     "version": "1.0.0",
-    "description": "The frontent and api of the ITBS Utah support page",
+    "description": "The api and front-end for the support website",
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
