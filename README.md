@@ -1,3 +1,3 @@
 # ITBS Utah Support
 
-The api and frontent for the support page.
+The api and front-end for the support website.
