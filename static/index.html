@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <link rel="stylesheet" href="./assets/css/bulma.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 
     <title>Support | ITBS Utah</title>
 </head>
@@ -20,9 +20,10 @@
             <header class="navbar">
                 <div class="container">
                     <div class="navbar-brand is-dark">
-                        <a class="heroIcon" href="./">
-                            <img src="/assets/img/logo_full.png" title="Logo">
+                        <a class="heroIcon" href="/">
+                            <img src="/assets/img/logo.png" title="Logo">
                         </a>
+                        <a class="navTitle" href="/">Business Solutions</a>
                         <span class="navbar-burger" data-target="navbarMenuHeroC">
                             <span></span>
                             <span></span>
@@ -31,28 +32,17 @@
                     </div>
                     <div id="navbarMenuHeroC" class="navbar-menu">
                         <div class="navbar-end">
-                            <a class="navbar-item is-active" href="./kb">
-                                Knowlage Base
-                            </a>
-                            <!--<a class="navbar-item" href="/settings">
-                                Settings
-                            </a>-->
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <p id="username" class="navbar-item" data-action="open_profile">Loading...</p>
-                                <span class="profile-icon" data-action="open_profile"></span>
-
-                                <div class="navbar-dropdown">
-                                    <a data-action="open_profile" class="navbar-item is-dropdown">
-                                        Profile
+                            <div class="navbar-end">
+                                <span class="navbar-item">
+                                    <a class="button is-info is-inverted" href="/login">
+                                        <span>Login</span>
                                     </a>
-                                    <!--<a href="/settings" class="navbar-item is-dropdown">
-                                        Settings
-                                    </a>-->
-                                    <hr class="navbar-divider">
-                                    <a href="/?action=logout" class="navbar-item is-dropdown">
-                                        Logout
+                                </span>
+                                <span class="navbar-item">
+                                    <a class="button is-info" href="/signup">
+                                        <span>Sign Up</span>
                                     </a>
-                                </div>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -71,11 +61,35 @@
     </section>
 
     <div class="content">
-        <!--<h1>Under construction</h1>-->
-        <span class="material-symbols-outlined scroll_arrow fadeout">arrow_circle_up</span>
+        <div class="knowlagebase_search">
+            <div class="search">
+                <span class="material-symbols-rounded">search</span>
+                <input class="input is-info is-rounded searchBar" type="text" placeholder="Search ITBS Support"
+                    data-func="search">
+            </div>
+            <div class="control has-icons-left sort">
+                <div class="select is-info is-rounded sortSelect">
+                    <select>
+                        <option selected>All</option>
+                        <option>Firewall/Security</option>
+                        <option>Networking</option>
+                        <option>Servers</option>
+                        <option>Email</option>
+                        <option>Computer</option>
+                        <option>VOIP/Phones</option>
+                    </select>
+                </div>
+                <span class="icon is-left">
+                    <span class="material-symbols-rounded">category</span>
+                </span>
+            </div>
+        </div>
+        <span class="material-symbols-rounded scroll_arrow fadeout">arrow_circle_up</span>
     </div>
 
-    <script src="./assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/search.js"></script>
 </body>
 
 </html>

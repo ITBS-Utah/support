@@ -14,8 +14,9 @@ h1 {
     font-family: montserrat-black;
 }
 
-.material-symbols-outlined {
+.material-symbols-rounded {
     user-select: none;
+    color: #000;
 }
 
 .scroll_arrow {
@@ -71,7 +72,76 @@ h1 {
 
 .heroIcon {
     margin: auto;
-    width: 250px;
+    height: 40px;
+}
+
+.heroIcon>img {
+    height: 40px;
+}
+
+.navTitle {
+    margin: auto;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: montserrat-black;
+    font-size: 20px;
+}
+
+.heroTitle {
+    font-family: montserrat-black;
+    font-size: 100px;
+}
+
+.search {
+    text-align: center;
+    width: 500px;
+    display: inline-block;
+    margin: auto;
+    margin-right: 0px;
+}
+
+.search input {
+    width: 500px;
+    text-align: center;
+}
+
+.search span {
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+}
+
+button.button.is-rounded.is-info.has-right-sharp {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+div.select.is-info.is-rounded.sortSelect>select {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+input.is-info.is-rounded.searchBar {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.knowlagebase_search {
+    width: 100vw;
+    position: sticky;
+    top: 50px;
+    background: #fff;
+    z-index: 4;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.sort {
+    display: inline-block;
+    margin: auto;
+    margin-left: 0px;
 }
 
 @font-face {

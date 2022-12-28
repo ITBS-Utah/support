@@ -21,12 +21,6 @@ const app = express();
 app.use(express.json());
 app.use(cors(corsOptionsDelegate));
 
-app.use(express.static(path.join(__dirname, '/static/')));
-app.use(express.static(path.join(__dirname, '/static/'), { index: false, extensions: ['html'] }));
-app.use((req, res, next) => {
-    res.status(404).send(`Could not find ${req.path}`)
-})
-
 function database_() {
     (this.get = async function (path) {
         return '<h1>Under construction</h1>';
@@ -38,7 +32,7 @@ function database_() {
 
 const db = new database_();
 
-app.get('/kb/:id', async (req, res) => {
+app.get('/kb/:id', (req, res) => {
     const id = req.params.id;
 
     db.get(`/kb/${id}`).then(data => {
@@ -46,9 +40,34 @@ app.get('/kb/:id', async (req, res) => {
     })
 });
 
-/*app.get('*', async (req, res) => {
-    
-});*/
+app.get('/api/v1/search', async (req, res) => {
+    const filter = req.query.filter;
+    const query = req.query.query;
+
+    if (filter && query) {
+        res.json({
+            valid: true,
+            data: {
+                results: [
+                    {
+                        title: 'Welcome to the ITBS Utah Fourm',
+                        supportId: uuid()
+                    }
+                ]
+            }
+        });
+    } else {
+        res.json({
+            valid: false,
+            errorMsg: 'Missing Data'
+        })
+    }
+});
+
+app.use(express.static(path.join(__dirname, './static/'), { extensions: ['html'] }));
+app.use(function (req, res) {
+    res.status(404).sendFile(path.join(__dirname, './static/', 'assets/templates/404.html'));
+});
 
 const server = app.listen(2000, () => {
     console.log('ITBS Utah Support server is running');
