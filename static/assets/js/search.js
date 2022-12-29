@@ -40,7 +40,7 @@ if (window.location.pathname == '/search') {
             } else {
                 searchFilter.value = 'All'
 
-                window.history.pushState({}, '', `?query=${searchBar.value.toLowerCase()}&filter=${searchFilter.value.toLowerCase()}`);
+                window.history.pushState({}, '', `?query=${searchBar.value}&filter=${searchFilter.value}`);
 
                 API.get(`/search?query=${searchBar.value.toLowerCase()}&filter=${searchFilter.value.toLowerCase()}`, 'text').then(res => {
                     alert(JSON.stringify(res))
